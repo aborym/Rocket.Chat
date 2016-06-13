@@ -6,7 +6,7 @@ Meteor.startup(function() {
 			public: true
 		});
 
-		this.add('Jitsi_Domain', '', {
+		this.add('Jitsi_Domain', 'meet.jit.si', {
 			type: 'string',
 			enableQuery: {
 				_id: 'Jitsi_Enabled',
@@ -23,6 +23,16 @@ Meteor.startup(function() {
 				value: true
 			},
 			i18nLabel: 'SSL',
+			public: true
+		});
+
+		this.add('Jitsi_Enable_Channels', false, {
+			type: 'boolean',
+			enableQuery: {
+				_id: 'Jitsi_Enabled',
+				value: true
+			},
+			i18nLabel: 'Jitsi_Enable_Channels',
 			public: true
 		});
 	});
